@@ -18,4 +18,4 @@ def profile():
 @login_required
 def cars():
     cars = Car.query.filter_by(user_token=current_user.token).all()
-    return render_template('cars.html', contacts=contacts)
+    return render_template('cars.html', cars=cars)
